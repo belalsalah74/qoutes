@@ -16,10 +16,16 @@ main {
     background-size: cover;
     background-image: var(--bg-url);
     transition: background-image 1.6s linear;
-    padding-top: 9.375rem;
+    padding-top: 100px;
     min-height: 100vh;
     text-align: center;
     color: white;
+}
+
+@media (min-width:768px) {
+    main {
+        padding-top: 9.375rem;
+    }
 }
 
 main::before {
