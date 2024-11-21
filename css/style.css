@@ -16,7 +16,7 @@ main {
     background-size: cover;
     background-image: var(--bg-url);
     transition: background-image 1.6s linear;
-    padding-top: 100px;
+    padding-top: 6.25rem;
     min-height: 100vh;
     text-align: center;
     color: white;
