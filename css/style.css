@@ -1,0 +1,147 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+main {
+    --bg-url: url("../imgs/1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-image: var(--bg-url);
+    transition: background-image 1.6s linear;
+    padding-top: 9.375rem;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(34, 32, 36, 0.74);
+}
+
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+}
+
+h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+
+.cta {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: .9375rem 2.5rem;
+    background-color: #566a68;
+    color: white;
+    border-radius: .625rem;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-bottom: 1.875rem;
+
+    &:hover {
+        background-color: #678885;
+    }
+}
+
+blockquote {
+    animation: fade 0.8s linear;
+    padding: 2.1875rem 1.5625rem;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.quote-content {
+    position: relative;
+    margin-bottom: 1.25rem;
+
+}
+
+.quote-text {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.author {
+    text-align: left;
+    font-size: 1rem;
+    color: #b1b1b1;
+    position: relative;
+    margin-inline-start: 3.125rem;
+
+    &::after {
+        content: '';
+        width: .625rem;
+        height: .125rem;
+        background-color: #b1b1b1;
+        position: absolute;
+        left: -0.9375rem;
+        top: 50%;
+    }
+}
+
+
+/* Icons */
+@font-face {
+    font-family: "Fa";
+    src: url(../fonts/fa-solid-900.ttf);
+}
+
+i {
+    font-family: "Fa";
+    font-weight: 900;
+    font-size: 2em;
+    line-height: .03125em;
+    vertical-align: -.1875em;
+    opacity: 0.3;
+    position: absolute;
+}
+
+
+
+.quote-left {
+    left: 0;
+    top: -40px;
+
+    &::before {
+        content: "\f10d";
+    }
+}
+
+.quote-right {
+    right: 0;
+    bottom: -50px;
+
+    &::before {
+        content: "\f10e"
+    }
+}
