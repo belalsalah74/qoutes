@@ -1,10 +1,8 @@
-import quotes from "./quotes.js";
-
 setInterval(() => {
   var randomImgNumber = Math.ceil(Math.random() * 9);
-  document
-    .querySelector("main")
-    .style.setProperty("--bg-url", ` url("../imgs/${randomImgNumber}.jpg")`);
+  document.querySelector(
+    "main"
+  ).style.backgroundImage = `url("./imgs/${randomImgNumber}.jpg")`;
 }, 3000);
 
 function getQuote() {
@@ -16,7 +14,7 @@ function getQuote() {
   return randomQuote;
 }
 
-window.createQuote = function () {
+function viewQuote() {
   var randomQuote = getQuote();
   document.getElementById("quote").innerHTML = `
     <blockquote>
@@ -28,4 +26,4 @@ window.createQuote = function () {
             <h2 class="author">${randomQuote.author}</h2>
           </blockquote>
         `;
-};
+}

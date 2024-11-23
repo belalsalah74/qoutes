@@ -11,22 +11,16 @@ body {
 }
 
 main {
-    --bg-url: url("../imgs/1.jpg");
     background-position: center;
     background-size: cover;
-    background-image: var(--bg-url);
+    background-image: url("../imgs/1.jpg");
     transition: background-image 1.6s linear;
-    padding-top: 6.25rem;
+    padding-top: 20vh;
     min-height: 100vh;
     text-align: center;
     color: white;
 }
 
-@media (min-width:768px) {
-    main {
-        padding-top: 9.375rem;
-    }
-}
 
 main::before {
     content: '';
@@ -61,7 +55,6 @@ h1 {
 
     .cta {
         font-size: 1.2rem;
-        margin-bottom: 2rem;
     }
 }
 
@@ -76,7 +69,7 @@ button {
     outline: none;
     font-size: 1.25rem;
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 
     &:hover {
         background-color: #678885;

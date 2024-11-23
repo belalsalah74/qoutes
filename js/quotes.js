@@ -246,5 +246,3 @@ var quotes = [
     author: "Richard M. Helms",
   },
 ];
-
-export default quotes;
